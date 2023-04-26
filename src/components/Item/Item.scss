@@ -1,0 +1,86 @@
+/* .card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    background-color: #ced0d371;
+    border-bottom: 3px solid #ffffff;
+    width: 90vw;
+    margin: 0 auto;
+
+    &:hover { 
+        background-color: #ced0d3c0;
+        cursor: pointer;
+    }
+
+    img {
+        height: 5rem;
+        width: auto;
+    }
+
+    .item-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        .symbol {
+            text-transform: uppercase;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+} */
+
+
+tbody {
+    tr {
+        background-color: #ced0d371;
+        border-bottom: 2px solid #ffffff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.5rem 0;
+
+        &:hover {
+            background-color: #ced0d3c0;
+            cursor: pointer; 
+        }
+
+        td {
+            text-align: left;
+            padding: .8rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .coin {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+
+            h2 {
+                font-size: 2.3rem;
+            }
+
+            img {
+                height: 6rem;
+                width: auto;
+            }
+
+            h3 {
+                text-transform: uppercase;
+            }
+        }
+
+        .value-price {
+            font-size: 2.5rem;
+        }
+    }
+}
