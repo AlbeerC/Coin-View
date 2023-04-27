@@ -38,7 +38,7 @@ function ItemListContainer () {
 
     return (
         <div>
-            <input className="search" type="search" value={search} onChange={handleSearch} placeholder="Search for coin name or symbol"/>
+            <input className="search" type="search" value={search} onChange={handleSearch} placeholder="Search by coin name or symbol"/>
             <ItemList data={data}/>
         </div>
     )

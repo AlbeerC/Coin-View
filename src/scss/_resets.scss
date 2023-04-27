@@ -14,3 +14,8 @@ body {
     text-align: center;
     margin: 5rem 0;
 }
+.d-none {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

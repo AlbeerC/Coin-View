@@ -9,13 +9,22 @@
     right: 0;
     left: 0;
 
-    h1 {
-        font-size: 3rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        letter-spacing: .5rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-shadow: 2px 2px 0 #eeeb26, 4px 4px 0 #b2c223, -4px 0px 6px rgba(206, 218, 41, 0.59);
+    @media (max-width: 768px) {
+        padding: 2rem 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 0 #eeeb26, 4px 4px 0 #b2c223, -4px 0px 6px rgba(206, 218, 41, 0.59);
+        }
     }
 
     input {
