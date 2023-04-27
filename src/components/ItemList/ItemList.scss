@@ -1,37 +1,8 @@
-/* .list {
-    margin: 5rem 0;
-
-    ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90vw;
-        margin: 2rem auto 0 auto;
-        padding: 2rem;
-        background-color: #000000;
-        color: #ffffff;
-        border-bottom: 2px solid #ffffff;
-
-        li {
-            list-style: none;
-            font-weight: bold;
-            font-size: 2rem;
-            cursor: default;
-
-            &:hover {
-                color: #ffff00;
-            }
-        }
-    }
-} */
-
-
-
-
 table {
     border-collapse: collapse;
     width: 90vw;
-    margin: 5rem auto;
+    min-height: 60vh;
+    margin: 0 auto 5rem auto;
 }
 thead {
     tr {

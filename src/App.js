@@ -7,13 +7,13 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={ <ItemListContainer/> } />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={ <ItemListContainer/> } />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
   );
 }
 
