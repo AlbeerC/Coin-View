@@ -18,6 +18,7 @@ function ItemList ( {data} ) {
                     {data.map((prod) => (
                     <Item key={prod.market_cap_rank}
                             id={prod.market_cap_rank}
+                            nameId={prod.id}
                             name={prod.name}
                             image={prod.image}
                             symbol={prod.symbol}

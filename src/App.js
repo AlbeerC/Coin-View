@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 // Components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={ <ItemListContainer/> } />
-          <Route path='/detail' element={ <ItemDetailContainer/> } />
+          <Route exact path='/' element={ <ItemListContainer/> } />
+          <Route path='/detail/:id' element={ <ItemDetailContainer/> } />
         </Routes>
         <Footer />
       </BrowserRouter>

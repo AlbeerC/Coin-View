@@ -1,7 +1,6 @@
 import './ItemListContainer.scss'
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
-import axios from "axios"
 
 function ItemListContainer () {
 
@@ -11,13 +10,14 @@ function ItemListContainer () {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
-        .then((response) => {
-            setData(response.data)
-            setOriginalData(response.data)
-        })
-        .catch(error => console.log(error))
-        .finally(() => setLoading(false))
+        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
+            .then(response => response.json())
+            .then((data) => {
+                setData(data)
+                setOriginalData(data)
+            })
+            .catch(error => console.log(error))
+            .finally(() => setLoading(false))
     }, [])
 
     const handleSearch = (e) => {
@@ -28,7 +28,7 @@ function ItemListContainer () {
     const filter = (searchTerm) => {
         const searchResults=originalData.filter((element)=>{
             if (element.name.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
-                element.symbol.toString().toLowerCase().includes(searchTerm.toLowerCase())) 
+                element.symbol.toString().toLowerCase().includes(searchTerm.toLowerCase()) ) 
                 { return element; }
             })
         setData(searchResults)
@@ -42,7 +42,6 @@ function ItemListContainer () {
             <ItemList data={data}/>
         </div>
     )
-    
 }
 
 export default ItemListContainer

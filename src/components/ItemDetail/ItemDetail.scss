@@ -1,0 +1,104 @@
+.detail {
+    background-color: #ffffff67;
+    border-radius: 1rem;
+    min-width: 90vw;
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: space-between;
+
+    .detail-left {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        .left-main-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-weight: bold;
+
+            h1 {
+                color: #ffff00;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin-top: 1rem;
+                text-transform: uppercase;
+            }
+
+            img {
+                height: 6rem;
+                width: auto;
+            }
+        }
+
+        .left-other-info {
+            h4 {
+                color: #ffffff;
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 2.3rem;
+                font-weight: 700;
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    .detail-right {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        .right-main-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            h2 {
+                color: #ffffff;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+
+            .prices p {
+                font-size: 3rem;
+                font-weight: bold;
+
+                &:last-child {
+                    border-top: 2px solid #ffffff;
+                }
+            }
+        }
+
+        .right-other-info{
+            h4 {
+                color: #ffffff;
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 2.3rem;
+                font-weight: 700;
+                padding-top: 1rem;
+            }
+        }
+    }
+}
+
+
+.red {
+    color: #ff0000;
+}
+.green {
+    color: #2fb42f;
+}
