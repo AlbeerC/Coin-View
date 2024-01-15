@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import "./ItemDetailContainer.scss"
+import Loading from '../Loading/Loading'
 
 function ItemDetailContainer() {
 
@@ -17,7 +18,7 @@ function ItemDetailContainer() {
       .finally(() => setLoading(false))
   }, [id])
 
-  if (loading) { return (<h1 className="loading">Loading...</h1>) }
+  if (loading) { return (<Loading />) }
 
   return (
     <div className="detailContainer">

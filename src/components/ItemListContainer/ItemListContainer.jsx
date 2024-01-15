@@ -1,6 +1,7 @@
 import './ItemListContainer.scss'
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
+import Loading from '../Loading/Loading';
 
 function ItemListContainer () {
 
@@ -26,20 +27,21 @@ function ItemListContainer () {
     }
 
     const filter = (searchTerm) => {
-        const searchResults=originalData.filter((element)=>{
+        const searchResults=originalData.filter((element) => {
             if (element.name.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
                 element.symbol.toString().toLowerCase().includes(searchTerm.toLowerCase()) ) 
                 { return element; }
             })
-        setData(searchResults)
+            setData(searchResults)
     }
 
-    if (loading) { return ( <h1 className="loading">Loading...</h1> ) }
+    if (loading) { return ( <Loading /> ) }
 
     return (
         <div>
             <input className="search" type="search" value={search} onChange={handleSearch} placeholder="Search by coin name or symbol"/>
             <ItemList data={data}/>
+            {data.length === 0 && <p className='not-found'>NOT FOUND</p>}
         </div>
     )
 }
